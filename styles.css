@@ -1,0 +1,219 @@
+:root {
+    --complementary-second-color: #898989;
+    --dark-color: #333333;
+    --clear-color: #FFFFFF;
+
+    --blue-color: #00ADE7;
+    --gray-color: #DDDDDD;
+    --gray-secondary-color: #EEEEEE;
+}
+
+body{
+    background-color: var(--clear-color);
+}
+
+h1, label, table, p, a {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 100%;
+    color: var(--dark-color);
+}
+
+h1 {
+    font-size: 200%;
+}
+
+table, th, td {
+    border: 0px solid;
+}
+
+table th {
+    padding: 5px;
+    background-color: var(--gray-secondary-color);
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-color: transparent;
+    border-bottom-color: var(--gray-color);
+    white-space: nowrap;
+    font-size: 75%;
+    font-style: normal;
+    font-weight: bold;
+    color: var(--complementary-second-color);
+}
+
+table th:first-child {
+    border-top-left-radius: 10px;
+}
+
+table th:last-child{
+    border-top-right-radius: 10px;
+}
+
+table td{
+    border-color: var(--gray-color);
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 1px;
+    padding: 5px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+table td form {
+    display: inline;
+}
+
+
+table {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+    background: linear-gradient(180deg, rgba(252,252,252,1) 0%, rgba(224,224,224,1) 100%);
+}
+
+nav {
+    background-color: var(--gray-secondary-color);
+    padding: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+}
+
+nav div {
+    max-width: 50%;
+    margin: auto;
+}
+
+nav div h1 {
+    font-size: 120%;
+    font-style: italic;
+    font-family: monospace;
+    color: var(--complementary-second-color);
+}
+
+#content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+@media (max-width: 1000px) {
+    #content {
+        max-width: 95%;
+    }
+
+    nav div{
+        max-width: 95%;
+    }
+
+    #inputarea{
+        max-width: 95%;
+    }
+}
+
+#tablearea {
+    padding: 10px;
+}
+
+#inputarea{
+    padding: 20px;
+    max-width: 80%;
+    margin: auto;
+    background: linear-gradient(180deg, rgba(252,252,252,1) 0%, rgba(224,224,224,1) 100%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+}
+
+#inputarea input[type="text"], #inputarea input[type="password"]{
+    border-width: 0px;
+    border-bottom-width: 1px;
+    border-style:dotted;
+    border-color: var(--complementary-second-color);
+    background-color: transparent;
+    font-size: 100%;
+    color: var(--dark-color);
+    
+    width: 100%;
+}
+
+#inputarea label{
+    font-size: 75%;
+    font-style: normal;
+    font-weight: bold;
+    color: var(--complementary-second-color);
+}
+
+.aback{
+    text-decoration: none;
+    font-size: 110%;
+    font-family: monospace;
+}
+
+.abutton {
+    display: inline-block;
+    font-size: 90%;
+    text-decoration: none;
+
+    background-color: var(--blue-color);
+    color: var(--clear-color);
+
+    padding-left: 15px;
+    padding-right: 15px; 
+    padding-bottom: 5px;
+    padding-top: 5px;
+
+    border-radius: 5px;
+    border-width: 0px;
+    margin: 0px;
+    
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.frmbutton {
+    display: inline;
+}
+
+#titlearea {
+    padding: 10px;
+}
+
+#titlearea h1, #titlearea a{
+    display: inline;
+}
+
+#titlearea h1{
+    float: left;
+}
+
+#titlearea form{
+    float: right;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#errorarea {
+    background-color: rgba(255, 0, 0, 0.6);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#errorarea p{
+    color: var(--clear-color);
+}
+
+#messageconfirm {
+    font-size: 120%;
+    margin-bottom: 20px;
+}
+
+.deletebutton{
+    background-color: rgba(255, 0, 0, 0.7);
+}
