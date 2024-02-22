@@ -6,11 +6,11 @@ class UserModel{
 
 	public function __construct(Configuration $connectionSetup){
 		try{
-            $host = $connectionSetup->host;
-            $port = $connectionSetup->port;
-            $username = $connectionSetup->username;
-            $password = $connectionSetup->password;
-            $database = $connectionSetup->database;
+			$host = $connectionSetup->host;
+			$port = $connectionSetup->port;
+			$username = $connectionSetup->username;
+			$password = $connectionSetup->password;
+			$database = $connectionSetup->database;
 
 			$this->pdo = new PDO("mysql:host=$host;port=$port;dbname=$database", $username, $password);
 			$this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -28,12 +28,12 @@ class UserModel{
 			foreach($stmt->fetchAll(PDO::FETCH_OBJ) as $row){
 				$user = new User();
 
-                $user->id = intval($row->id);
-                $user->username = $row->username;
-                $user->email = $row->email;
-                $user->password = "";
-
-                array_push($result, $user);
+				$user->id = intval($row->id);
+				$user->username = $row->username;
+				$user->email = $row->email;
+				$user->password = "";
+				
+				array_push($result, $user);
 			}
 
             return $result;
